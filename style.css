@@ -909,6 +909,16 @@ button:disabled {
     align-items: stretch;
   }
 
+  .exam-topbar,
+  .status-strip {
+    position: static;
+    top: auto;
+  }
+
+  .exam-topbar {
+    padding-bottom: 10px;
+  }
+
   .topbar-actions,
   .hero-actions,
   .action-row,
@@ -934,6 +944,10 @@ button:disabled {
   .quick-stats,
   .status-strip {
     grid-template-columns: 1fr;
+  }
+
+  .status-strip {
+    margin-bottom: 14px;
   }
 
   .question-card,
