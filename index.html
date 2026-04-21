@@ -15,15 +15,31 @@
       </a>
       <div class="topbar-actions">
         <a class="button button-ghost button-toplink" href="about.html">من نحن</a>
-        <label class="theme-switcher" for="theme-select">
-          <span>الثيم</span>
-          <select id="theme-select" aria-label="اختيار الثيم">
-            <option value="sky">الأزرق الهادئ</option>
-            <option value="sand">الرملي الدافئ</option>
-            <option value="reading">القراءة المريحة</option>
-            <option value="dark">الداكن</option>
-          </select>
-        </label>
+        <div class="theme-switcher" data-theme-picker>
+          <span class="theme-switcher-label">الثيم</span>
+          <button class="theme-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="اختيار الثيم" data-theme-trigger>
+            <span class="theme-trigger-text" data-theme-current>الأزرق الهادئ</span>
+            <span class="theme-trigger-icon" aria-hidden="true"></span>
+          </button>
+          <div class="theme-menu" role="listbox" aria-label="خيارات الثيم">
+            <button class="theme-option" type="button" role="option" data-theme-value="sky">
+              <span class="theme-swatch theme-swatch-sky" aria-hidden="true"></span>
+              <span>الأزرق الهادئ</span>
+            </button>
+            <button class="theme-option" type="button" role="option" data-theme-value="sand">
+              <span class="theme-swatch theme-swatch-sand" aria-hidden="true"></span>
+              <span>الرملي الدافئ</span>
+            </button>
+            <button class="theme-option" type="button" role="option" data-theme-value="reading">
+              <span class="theme-swatch theme-swatch-reading" aria-hidden="true"></span>
+              <span>القراءة المريحة</span>
+            </button>
+            <button class="theme-option" type="button" role="option" data-theme-value="dark">
+              <span class="theme-swatch theme-swatch-dark" aria-hidden="true"></span>
+              <span>الداكن</span>
+            </button>
+          </div>
+        </div>
       </div>
     </header>
 

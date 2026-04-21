@@ -11,6 +11,12 @@
   const ACTION_DEBOUNCE_MS = 300;
   const THEMES = ["sky", "sand", "reading", "dark"];
   const OPTION_KEYS = ["1", "2", "3", "4"];
+  const THEME_LABELS = {
+    sky: "الأزرق الهادئ",
+    sand: "الرملي الدافئ",
+    reading: "القراءة المريحة",
+    dark: "الداكن",
+  };
 
   const LABELS = {
     category: {
@@ -288,17 +294,121 @@
       const theme = THEMES.includes(settings.theme) ? settings.theme : "sky";
       document.body.dataset.theme = theme;
 
-      const select = document.getElementById("theme-select");
-      if (!select) {
+      const pickers = Array.from(document.querySelectorAll("[data-theme-picker]"));
+      if (!pickers.length) {
         return;
       }
 
-      select.value = theme;
-      select.addEventListener("change", () => {
-        const selectedTheme = THEMES.includes(select.value) ? select.value : "sky";
-        document.body.dataset.theme = selectedTheme;
-        Storage.writeSettings({ ...settings, theme: selectedTheme });
+      const applyTheme = (selectedTheme) => {
+        const nextTheme = THEMES.includes(selectedTheme) ? selectedTheme : "sky";
+        document.body.dataset.theme = nextTheme;
+        Storage.writeSettings({ ...Storage.readSettings(), theme: nextTheme });
+
+        pickers.forEach((picker) => {
+          const currentLabel = picker.querySelector("[data-theme-current]");
+          const options = Array.from(picker.querySelectorAll("[data-theme-value]"));
+          if (currentLabel) {
+            currentLabel.textContent = THEME_LABELS[nextTheme];
+          }
+
+          options.forEach((option) => {
+            const isActive = option.dataset.themeValue === nextTheme;
+            option.classList.toggle("is-active", isActive);
+            option.setAttribute("aria-selected", String(isActive));
+            option.tabIndex = isActive ? 0 : -1;
+          });
+        });
+      };
+
+      const closePicker = (picker) => {
+        picker.classList.remove("is-open");
+        const trigger = picker.querySelector("[data-theme-trigger]");
+        if (trigger) {
+          trigger.setAttribute("aria-expanded", "false");
+        }
+      };
+
+      const openPicker = (picker) => {
+        pickers.forEach((entry) => {
+          if (entry !== picker) {
+            closePicker(entry);
+          }
+        });
+        picker.classList.add("is-open");
+        const trigger = picker.querySelector("[data-theme-trigger]");
+        if (trigger) {
+          trigger.setAttribute("aria-expanded", "true");
+        }
+      };
+
+      pickers.forEach((picker) => {
+        const trigger = picker.querySelector("[data-theme-trigger]");
+        const options = Array.from(picker.querySelectorAll("[data-theme-value]"));
+
+        if (!trigger || !options.length) {
+          return;
+        }
+
+        trigger.addEventListener("click", () => {
+          const isOpen = picker.classList.contains("is-open");
+          if (isOpen) {
+            closePicker(picker);
+          } else {
+            openPicker(picker);
+          }
+        });
+
+        trigger.addEventListener("keydown", (event) => {
+          if (event.key === "ArrowDown" || event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openPicker(picker);
+            const activeOption = options.find((option) => option.classList.contains("is-active")) || options[0];
+            activeOption.focus();
+          }
+        });
+
+        options.forEach((option, index) => {
+          option.addEventListener("click", () => {
+            applyTheme(option.dataset.themeValue);
+            closePicker(picker);
+            trigger.focus();
+          });
+
+          option.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+              closePicker(picker);
+              trigger.focus();
+              return;
+            }
+
+            if (event.key === "ArrowDown") {
+              event.preventDefault();
+              options[(index + 1) % options.length].focus();
+            }
+
+            if (event.key === "ArrowUp") {
+              event.preventDefault();
+              options[(index - 1 + options.length) % options.length].focus();
+            }
+          });
+        });
       });
+
+      document.addEventListener("click", (event) => {
+        pickers.forEach((picker) => {
+          if (!picker.contains(event.target)) {
+            closePicker(picker);
+          }
+        });
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          pickers.forEach(closePicker);
+        }
+      });
+
+      applyTheme(theme);
     },
   };
 
