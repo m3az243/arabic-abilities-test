@@ -891,6 +891,11 @@ button:disabled {
 }
 
 @media (max-width: 640px) {
+  .exam-layout,
+  .exam-main {
+    display: block;
+  }
+
   .app-shell {
     width: min(100% - 20px, 100%);
     padding-top: 12px;
@@ -911,12 +916,14 @@ button:disabled {
 
   .exam-topbar,
   .status-strip {
-    position: static;
+    position: static !important;
     top: auto;
+    z-index: auto;
   }
 
   .exam-topbar {
     padding-bottom: 10px;
+    backdrop-filter: none;
   }
 
   .topbar-actions,
@@ -948,6 +955,13 @@ button:disabled {
 
   .status-strip {
     margin-bottom: 14px;
+  }
+
+  .question-card,
+  .control-row,
+  .exam-sidebar {
+    position: relative;
+    z-index: 1;
   }
 
   .question-card,
