@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "question": "قرأ خالد الفقرة ثم لخّص فكرتها الرئيسة في سطر واحد. ما المهارة التي استخدمها أساسًا؟",
+    "options": ["الاستنباط العددي", "الفهم العام للنص", "التحويل الهندسي", "الترتيب الزمني للأعداد"],
+    "correctAnswer": 1,
+    "category": "verbal",
+    "subType": "reading_comprehension",
+    "difficulty": "easy",
+    "explanation": "تلخيص الفكرة الرئيسة يعتمد على فهم المعنى العام للنص وليس على الحساب أو الهندسة.",
+    "tags": ["استيعاب", "لغة"]
+  },
+  {
+    "id": 2,
+    "question": "إذا كان الكاتب يكرر أمثلة مختلفة ليؤكد أهمية التخطيط، فما الهدف الرئيس من الفقرة؟",
+    "options": ["السخرية من القارئ", "عرض تعريف لغوي", "التأكيد على قيمة التخطيط", "ذكر معلومات متفرقة بلا رابط"],
+    "correctAnswer": 2,
+    "category": "verbal",
+    "subType": "reading_comprehension",
+    "difficulty": "medium",
+    "explanation": "تكرار الأمثلة هنا يخدم فكرة واحدة وهي إبراز أهمية التخطيط.",
+    "tags": ["استيعاب", "تحليل"]
+  },
+  {
+    "id": 3,
+    "question": "يتميز الطالب المجتهد بأنه _______ على تنظيم وقته مهما كثرت المهام.",
+    "options": ["عاجز", "حريص", "مرتبك", "متردد"],
+    "correctAnswer": 1,
+    "category": "verbal",
+    "subType": "sentence_completion",
+    "difficulty": "easy",
+    "explanation": "السياق إيجابي ويتحدث عن الاجتهاد وتنظيم الوقت، لذا كلمة 'حريص' هي الأنسب.",
+    "tags": ["إكمال", "لغة"]
+  },
+  {
+    "id": 4,
+    "question": "العلم نور، والجهل _______ يعيق الإنسان عن رؤية الحقائق.",
+    "options": ["يقين", "ظلام", "إبداع", "انطلاق"],
+    "correctAnswer": 1,
+    "category": "verbal",
+    "subType": "sentence_completion",
+    "difficulty": "medium",
+    "explanation": "المقابلة المعنوية مع 'نور' هي 'ظلام'.",
+    "tags": ["إكمال", "معنى"]
+  },
+  {
+    "id": 5,
+    "question": "كتاب : قراءة = قلم : ؟",
+    "options": ["حبر", "كتابة", "مكتبة", "دفتر"],
+    "correctAnswer": 1,
+    "category": "verbal",
+    "subType": "analogy",
+    "difficulty": "easy",
+    "explanation": "العلاقة هي أداة وما ينتج عنها أو تستخدم فيه؛ الكتاب للقراءة والقلم للكتابة.",
+    "tags": ["تناظر", "لغة"]
+  },
+  {
+    "id": 6,
+    "question": "طبيب : علاج = معلم : ؟",
+    "options": ["تعليم", "مستشفى", "طالب", "اختبار"],
+    "correctAnswer": 0,
+    "category": "verbal",
+    "subType": "analogy",
+    "difficulty": "medium",
+    "explanation": "العلاقة مهنة وما تؤديه من وظيفة؛ الطبيب يعالج والمعلم يعلّم.",
+    "tags": ["تناظر", "لغة"]
+  },
+  {
+    "id": 7,
+    "question": "كان الجو في الرحلة مفعمًا بالبهجة، والوجوه تفيض سرورًا، والجميع يشعرون بالكآبة. أي كلمة لا تنسجم مع السياق؟",
+    "options": ["البهجة", "سرورًا", "الكآبة", "الرحلة"],
+    "correctAnswer": 2,
+    "category": "verbal",
+    "subType": "contextual_error",
+    "difficulty": "medium",
+    "explanation": "السياق كله إيجابي، وكلمة 'الكآبة' تناقض المعنى العام.",
+    "tags": ["سياق", "خطأ"]
+  },
+  {
+    "id": 8,
+    "question": "وصف الكاتب المشروع بأنه منظم، واضح، مترابط، فوضوي. ما الكلمة غير المناسبة؟",
+    "options": ["منظم", "واضح", "مترابط", "فوضوي"],
+    "correctAnswer": 3,
+    "category": "verbal",
+    "subType": "contextual_error",
+    "difficulty": "easy",
+    "explanation": "الكلمات الثلاث الأولى منسجمة، بينما 'فوضوي' تنقضها.",
+    "tags": ["سياق", "معنى"]
+  },
+  {
+    "id": 9,
+    "question": "أي الكلمات الآتية تعد مختلفة عن البقية؟",
+    "options": ["قلم", "مسطرة", "مقص", "سيارة"],
+    "correctAnswer": 3,
+    "category": "verbal",
+    "subType": "odd_word",
+    "difficulty": "easy",
+    "explanation": "القلم والمسطرة والمقص أدوات مدرسية، بينما السيارة وسيلة نقل.",
+    "tags": ["شاذة", "تصنيف"]
+  },
+  {
+    "id": 10,
+    "question": "اختر المفردة الشاذة:",
+    "options": ["تفاح", "برتقال", "موز", "طاولة"],
+    "correctAnswer": 3,
+    "category": "verbal",
+    "subType": "odd_word",
+    "difficulty": "easy",
+    "explanation": "الثلاثة الأولى فواكه، بينما الطاولة قطعة أثاث.",
+    "tags": ["شاذة", "لغة"]
+  },
+  {
+    "id": 11,
+    "question": "اشترى أحمد 3 دفاتر، سعر الدفتر الواحد 8 ريالات. كم دفع بالمجموع؟",
+    "options": ["11", "16", "24", "28"],
+    "correctAnswer": 2,
+    "category": "quantitative",
+    "subType": "arithmetic",
+    "difficulty": "easy",
+    "explanation": "3 × 8 = 24.",
+    "tags": ["حساب", "ضرب"]
+  },
+  {
+    "id": 12,
+    "question": "إذا كانت نسبة الطلاب إلى الطالبات في فصل ما 2 : 3 وكان عدد الطلاب 12، فكم عدد الطالبات؟",
+    "options": ["16", "18", "20", "24"],
+    "correctAnswer": 1,
+    "category": "quantitative",
+    "subType": "arithmetic",
+    "difficulty": "medium",
+    "explanation": "إذا كانت 2 أجزاء = 12، فالجزء الواحد = 6، إذًا 3 أجزاء = 18.",
+    "tags": ["نسبة", "تناسب"]
+  },
+  {
+    "id": 13,
+    "question": "انخفض سعر سلعة من 80 إلى 60 ريالًا. كم مقدار الانخفاض؟",
+    "options": ["10", "20", "30", "40"],
+    "correctAnswer": 1,
+    "category": "quantitative",
+    "subType": "arithmetic",
+    "difficulty": "easy",
+    "explanation": "80 - 60 = 20.",
+    "tags": ["طرح", "حساب"]
+  },
+  {
+    "id": 14,
+    "question": "إذا كان 5/8 من عدد ما يساوي 20، فما العدد؟",
+    "options": ["24", "28", "32", "36"],
+    "correctAnswer": 2,
+    "category": "quantitative",
+    "subType": "arithmetic",
+    "difficulty": "hard",
+    "explanation": "العدد = 20 × 8 ÷ 5 = 32.",
+    "tags": ["كسور", "نسبة"]
+  },
+  {
+    "id": 15,
+    "question": "مستطيل طوله 9 سم وعرضه 4 سم. ما مساحته؟",
+    "options": ["13", "26", "36", "72"],
+    "correctAnswer": 2,
+    "category": "quantitative",
+    "subType": "geometry",
+    "difficulty": "easy",
+    "explanation": "مساحة المستطيل = الطول × العرض = 9 × 4 = 36.",
+    "tags": ["هندسة", "مساحة"]
+  },
+  {
+    "id": 16,
+    "question": "محيط مربع يساوي 24 سم. فما طول ضلعه؟",
+    "options": ["4", "5", "6", "8"],
+    "correctAnswer": 2,
+    "category": "quantitative",
+    "subType": "geometry",
+    "difficulty": "medium",
+    "explanation": "طول الضلع = 24 ÷ 4 = 6.",
+    "tags": ["هندسة", "محيط"]
+  },
+  {
+    "id": 17,
+    "question": "إذا كان 2س + 5 = 17، فما قيمة س؟",
+    "options": ["5", "6", "7", "8"],
+    "correctAnswer": 1,
+    "category": "quantitative",
+    "subType": "algebra",
+    "difficulty": "easy",
+    "explanation": "2س = 12 ثم س = 6.",
+    "tags": ["جبر", "معادلات"]
+  },
+  {
+    "id": 18,
+    "question": "حل المعادلة 3س - 4 = 11",
+    "options": ["3", "4", "5", "6"],
+    "correctAnswer": 2,
+    "category": "quantitative",
+    "subType": "algebra",
+    "difficulty": "medium",
+    "explanation": "3س = 15 ثم س = 5.",
+    "tags": ["جبر", "حل"]
+  },
+  {
+    "id": 19,
+    "question": "متوسط الأعداد 4 و6 و8 و10 يساوي:",
+    "options": ["6", "7", "8", "9"],
+    "correctAnswer": 1,
+    "category": "quantitative",
+    "subType": "statistics",
+    "difficulty": "easy",
+    "explanation": "المتوسط = (4 + 6 + 8 + 10) ÷ 4 = 7.",
+    "tags": ["إحصاء", "متوسط"]
+  },
+  {
+    "id": 20,
+    "question": "في صندوق 3 كرات حمراء و2 زرقاء. ما احتمال سحب كرة حمراء؟",
+    "options": ["1/5", "2/5", "3/5", "4/5"],
+    "correctAnswer": 2,
+    "category": "quantitative",
+    "subType": "statistics",
+    "difficulty": "medium",
+    "explanation": "عدد النتائج المواتية 3 من أصل 5 كرات، لذا الاحتمال 3/5.",
+    "tags": ["إحصاء", "احتمال"]
+  }
+]

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="منصة اختبار القدرات التجريبي - اختبار تفاعلي سريع في الكمي واللفظي.">
+  <title>اختبار القدرات التجريبي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <div class="app-shell app-shell-home">
+    <header class="topbar topbar-home">
+      <a class="brand-text" href="index.html" aria-label="العودة إلى الصفحة الرئيسية">قياس 
+      </a>
+      <div class="topbar-actions">
+        <a class="button button-ghost button-toplink" href="about.html">من نحن</a>
+        <label class="theme-switcher" for="theme-select">
+          <span>الثيم</span>
+          <select id="theme-select" aria-label="اختيار الثيم">
+            <option value="sky">الأزرق الهادئ</option>
+            <option value="sand">الرملي الدافئ</option>
+            <option value="reading">القراءة المريحة</option>
+            <option value="dark">الداكن</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <main class="hero-layout">
+      <section class="hero-card">
+        <p class="eyebrow">محاكاة سريعة وواقعية</p>
+        <h1>اختبر مستواك في القدرات</h1>
+        <p class="hero-copy">
+          منصة  لاختبار تجريبي متكامل، مع مؤقت دقيق، حفظ تلقائي، نتائج فورية،
+          وتجربة مريحة على الجوال والكمبيوتر.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="exam.html?action=start">ابدأ الاختبار</a>
+          <a class="button button-secondary is-hidden" id="resume-link" href="exam.html?action=resume">استئناف الاختبار</a>
+        </div>
+
+        <div class="quick-stats" aria-label="معلومات سريعة عن الاختبار">
+          <article class="stat-tile">
+            <strong>20</strong>
+            <span>سؤالًا</span>
+          </article>
+          <article class="stat-tile">
+            <strong>25</strong>
+            <span>دقيقة</span>
+          </article>
+          <article class="stat-tile">
+            <strong>فوري</strong>
+            <span>تحليل مباشر</span>
+          </article>
+        </div>
+      </section>
+
+      <aside class="info-panel">
+        <section class="panel-card">
+          <h2>قبل أن تبدأ</h2>
+          <ul class="clean-list">
+            <li>الأسئلة موزعة بين اللفظي والكمي.</li>
+            <li>الإجابة تُحفظ تلقائيًا عند كل تغيير.</li>
+            <li>يمكنك تعليم الأسئلة للمراجعة والرجوع لها لاحقًا.</li>
+            <li>ستظهر الرسالة التشجيعية بعد انتهاء الاختبار فقط.</li>
+          </ul>
+        </section>
+
+        <section class="panel-card">
+          <h2>ماذا ستجد في النتائج؟</h2>
+          <ul class="clean-list">
+            <li>الدرجة والنسبة والتقييم العام.</li>
+            <li>أداءك حسب القسم والنوع الفرعي.</li>
+            <li>مراجعة مفصلة لكل سؤال مع الشرح.</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

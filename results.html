@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="نتائج اختبار القدرات التجريبي وتحليل الأداء.">
+  <title>النتائج | اختبار القدرات التجريبي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="results">
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand-text brand-text-small" href="index.html">اختبار القدرات التجريبي</a>
+      <div class="topbar-actions">
+        <a class="button button-ghost button-toplink" href="about.html">من نحن</a>
+        <label class="theme-switcher" for="theme-select">
+          <span>الثيم</span>
+          <select id="theme-select" aria-label="اختيار الثيم">
+            <option value="sky">الأزرق الهادئ</option>
+            <option value="sand">الرملي الدافئ</option>
+            <option value="reading">القراءة المريحة</option>
+            <option value="dark">الداكن</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <main class="results-layout">
+      <section class="summary-grid">
+        <article class="summary-card summary-highlight">
+          <p class="eyebrow">النتيجة النهائية</p>
+          <div class="score-line">
+            <strong id="score-value">0 / 20</strong>
+            <span id="score-percent">0%</span>
+          </div>
+          <p class="score-rating" id="score-rating">جاري الحساب</p>
+          <p class="encouragement-message" id="encouragement-message"></p>
+        </article>
+
+        <article class="summary-card">
+          <h2>ملخص سريع</h2>
+          <div class="metric-list">
+            <div class="metric-item">
+              <span>الإجابات الصحيحة</span>
+              <strong id="correct-count">0</strong>
+            </div>
+            <div class="metric-item">
+              <span>الإجابات الخاطئة</span>
+              <strong id="wrong-count">0</strong>
+            </div>
+            <div class="metric-item">
+              <span>غير المجابة</span>
+              <strong id="unanswered-count">0</strong>
+            </div>
+            <div class="metric-item">
+              <span>الوقت المستغرق</span>
+              <strong id="time-used">00:00</strong>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="summary-card">
+        <div class="section-head">
+          <h2>الأداء حسب القسم</h2>
+          <span id="attempt-date"></span>
+        </div>
+        <div class="analytics-grid" id="category-analytics"></div>
+      </section>
+
+      <section class="summary-card">
+        <h2>الأداء حسب النوع الفرعي</h2>
+        <div class="analytics-grid analytics-grid-compact" id="subtype-analytics"></div>
+      </section>
+
+      <section class="summary-card">
+        <div class="section-head">
+          <h2>مراجعة الأسئلة</h2>
+          <div class="action-row">
+            <button class="button button-secondary" id="retry-button" type="button">إعادة الاختبار</button>
+            <button class="button button-ghost" id="print-button" type="button">طباعة النتيجة</button>
+            <a class="button button-primary" href="index.html">العودة للرئيسية</a>
+          </div>
+        </div>
+        <div class="review-list" id="review-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

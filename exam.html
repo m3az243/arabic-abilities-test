@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="صفحة الاختبار التفاعلي لاختبار القدرات التجريبي.">
+  <title>الاختبار | اختبار القدرات التجريبي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="exam">
+  <div class="app-shell">
+    <header class="topbar exam-topbar">
+      <a class="brand-text brand-text-small" href="index.html">اختبار القدرات التجريبي</a>
+      <div class="topbar-actions">
+        <a class="button button-ghost button-toplink" href="about.html">من نحن</a>
+        <label class="theme-switcher" for="theme-select">
+          <span>الثيم</span>
+          <select id="theme-select" aria-label="اختيار الثيم">
+            <option value="sky">الأزرق الهادئ</option>
+            <option value="sand">الرملي الدافئ</option>
+            <option value="reading">القراءة المريحة</option>
+            <option value="dark">الداكن</option>
+          </select>
+        </label>
+        <button class="icon-button" id="fullscreen-button" type="button" aria-label="تبديل وضع ملء الشاشة">ملء الشاشة</button>
+      </div>
+    </header>
+
+    <main class="exam-layout">
+      <section class="exam-main">
+        <div class="status-strip" aria-label="حالة الاختبار">
+          <div class="status-chip">
+            <span class="muted-label">السؤال</span>
+            <strong id="question-progress">1 / 20</strong>
+          </div>
+
+          <div class="progress-card" aria-label="تقدم الاختبار">
+            <div class="progress-track">
+              <div class="progress-value" id="progress-value"></div>
+            </div>
+            <span id="progress-label">0%</span>
+          </div>
+
+          <div class="status-chip timer-chip" id="timer-chip">
+            <span class="muted-label">الوقت</span>
+            <strong id="timer-display">25:00</strong>
+          </div>
+
+          <div class="status-chip">
+            <span class="muted-label">معلّمة</span>
+            <strong id="flagged-count">0</strong>
+          </div>
+        </div>
+
+        <section class="question-card" aria-live="polite">
+          <div class="question-meta">
+            <div class="badge-row">
+              <span class="badge" id="category-badge">لفظي</span>
+              <span class="badge badge-soft" id="subtype-badge">تناظر لفظي</span>
+              <span class="badge badge-outline" id="difficulty-badge">متوسط</span>
+            </div>
+            <p class="question-text" id="question-text"></p>
+          </div>
+
+          <div class="options-list" id="options-list" role="radiogroup" aria-label="خيارات الإجابة"></div>
+        </section>
+
+        <div class="control-row">
+          <button class="button button-secondary" id="prev-button" type="button">السابق</button>
+          <button class="button button-ghost" id="flag-button" type="button">تعليم للمراجعة</button>
+          <button class="button button-primary" id="next-button" type="button">التالي</button>
+          <button class="button button-danger" id="finish-button" type="button">إنهاء الاختبار</button>
+        </div>
+      </section>
+
+      <aside class="exam-sidebar">
+        <section class="sidebar-card">
+          <div class="sidebar-head">
+            <h2>التنقل السريع</h2>
+            <span id="answered-summary">0 / 20 مجاب</span>
+          </div>
+          <div class="question-grid" id="question-grid" aria-label="لوحة التنقل بين الأسئلة"></div>
+        </section>
+
+        <section class="sidebar-card sidebar-note">
+          <h2>اختصارات</h2>
+          <ul class="clean-list">
+            <li>الأرقام 1 - 4 لاختيار الإجابة.</li>
+            <li>Enter للانتقال للسؤال التالي.</li>
+            <li>سيتم حفظ تقدمك تلقائيًا طوال الوقت.</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <div class="modal is-hidden" id="finish-modal" role="dialog" aria-modal="true" aria-labelledby="finish-modal-title">
+    <div class="modal-card">
+      <h2 id="finish-modal-title">تأكيد إنهاء الاختبار</h2>
+      <p>هل تريد إنهاء الاختبار الآن؟ سيتم احتساب جميع الإجابات المحفوظة وعرض النتائج مباشرة.</p>
+      <div class="modal-actions">
+        <button class="button button-secondary" id="cancel-finish-button" type="button">إلغاء</button>
+        <button class="button button-danger" id="confirm-finish-button" type="button">تأكيد الإنهاء</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
